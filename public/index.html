@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Biblioteca 4utoGestita</title>
+</head>
+<body>
+    <h1>Biblioteca Autogestita</h1>
+
+    <h4><ul id="lista-libri"></ul></h4>
+
+    <table id="libri-table">
+
+    </table>
+
+        <form id="add-book-form">
+            <input type="text" name="codLibro" placeholder="Codice Libro"><br>
+            <input type="text" name="nomeLibro" placeholder="Nome Libro"><br>
+            <input type="text" name="materiaLibro" placeholder="Materia Libro"><br>
+            <input type="text" name="autoreLibro" placeholder="Autore Libro"><br>
+            <button id="submitButton">Submit</button>
+        </form>
+
+    <script>
+        let firebaseConfig = {
+        apiKey: "AIzaSyB2qmg4SQ4MZlNsY090FW-GAXWrjxu1-30",
+        authDomain: "biblioteca-4utogestita.firebaseapp.com",
+        databaseURL: "https://biblioteca-4utogestita.firebaseio.com",
+        projectId: "biblioteca-4utogestita",
+        storageBucket: "biblioteca-4utogestita.appspot.com",
+        messagingSenderId: "883717545620",
+        appId: "1:883717545620:web:7daeb3eba36d5213"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
